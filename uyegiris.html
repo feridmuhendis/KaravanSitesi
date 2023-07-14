@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Karavan Satış ve Kiralama - Üye Girişi</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="karavancss.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Üye Girişi</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">E-posta Adresi:</label>
+        <input type="email" class="form-control" id="email" placeholder="E-posta adresinizi girin">
+      </div>
+      <div class="form-group">
+        <label for="password">Şifre:</label>
+        <input type="password" class="form-control" id="password" placeholder="Şifrenizi girin">
+      </div>
+     <div class="form-group d-flex align-items-center">
+  <button type="submit" class="btn btn-primary mr-2">Giriş Yap</button>
+  <a href="#" class="btn btn-link">Üye Ol</a>
+</div>
+
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    // Form gönderildiğinde işlev
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Formun otomatik olarak gönderilmesini engelle
+
+      // E-posta ve şifre değerlerini al
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      // Örnek doğrulama - Burada gerçek bir doğrulama işlemi yapmanız gerekecektir
+      if (email === 'example@example.com' && password === 'password') {
+        alert('Giriş başarılı!');
+        // Giriş başarılı ise yönlendirme yapılabilir veya başka işlemler yapılabilir
+      } else {
+        alert('Hatalı e-posta veya şifre!');
+      }
+    });
+  </script>
+</body>
+</html>
